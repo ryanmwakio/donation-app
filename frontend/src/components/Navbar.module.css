@@ -1,0 +1,7 @@
+.active {
+  @apply text-white;
+}
+
+a.active {
+  @apply text-white;
+}

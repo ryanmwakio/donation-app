@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding: 50px;
+    background: #d83d3d;
+    color: rgb(66, 65, 65);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+}
+
+a {
+    color: #00b7ff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.pb-2 {
+    padding-bottom: 0.5rem;
+}
+
+.my-2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.section-wrapper {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.header {
+    padding: 2rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    margin-bottom: 2rem;
+}
+
+.header-logo {
+    max-width: 100px;
+    border-bottom: 1px dashed #1a202c;
+    padding-bottom: 0.3rem;
+}
+
+.url-styling {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #d83d3d;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    border-left: 2px solid #d83d3d;
+    padding: 0.7rem 1rem;
+    margin: 1rem;
+    background: #fae8e8;
+}
+
+.endpoint-wrapper {
+    padding: 1rem;
+    background: #fff;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px dashed #ccc;
+}
+
+.post {
+    color: green;
+    font-weight: bold;
+}
+
+code {
+    font-size: 0.8rem;
+    font-weight: 400;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    padding: 0.7rem 1rem;
+    margin: 1rem;
+    background: #f5f3f3;
+    overflow: hidden;
+}
+
+code.success {
+    color: green;
+    border-left: 2px solid green;
+}
+
+code.danger {
+    color: red;
+    border-left: 2px solid red;
+}
+
+.code-response {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.3rem;
+}
+.code-response.success {
+    border-bottom: 1px dashed green;
+}
+.code-response.danger {
+    border-bottom: 1px dashed red;
+}
+
+pre {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 2px;
+    border: 1px solid darkgrey;
+    margin: 3px 0;
+    color: dimgrey;
+    overflow: scroll;
+}
+
+.text-primary {
+    color: #00b7ff;
+}
+
+.text-warning {
+    color: #ffc107;
+}
+
+.text-success {
+    color: green;
+}
+
+.text-danger {
+    color: red;
+}
