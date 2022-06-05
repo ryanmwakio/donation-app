@@ -14,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <header className='z-50 shadow-lg py-4 bg-red-500'>
+    <header className='z-50 py-4 bg-blue-500 navbar'>
       <div className='container lg:pb-0 text-lg text-white'>
         <div className='flex gap-x-4 justify-between items-center'>
           <Link to='/'>

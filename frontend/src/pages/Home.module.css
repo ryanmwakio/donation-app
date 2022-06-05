@@ -1,1 +1,28 @@
+.homeSection {
+  background: #ef4444;
 
+  background: linear-gradient(0deg, #ffffffee, #fdfdfde7),
+    url(../assets/images/hero-img.jpg) no-repeat center center;
+  object-fit: cover;
+  min-height: 90vh;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.formSection {
+  @apply border border-dashed border-blue-400;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.2);
+}
