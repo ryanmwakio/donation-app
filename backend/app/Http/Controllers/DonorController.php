@@ -253,14 +253,9 @@ class DonorController extends Controller
                      "text/html", "<h1>Thank you for donating.</h1><br><style>h1{color:red;}</style><p>You can now make payment using pesapal <a href=".$redirect_url." style='color: #0072b3'>pesapal payment link</a></p><hr><img src='https://res.cloudinary.com/dwxeqcqt0/image/upload/v1654351754/imageedit_1_2429230768_tg9nee.png'/>"
                  );
                  $sendgrid = new \SendGrid(env('SENDGRID_API_KEY'));
-                 try {
-                     $response = $sendgrid->send($email);
-                     $email_response_code = $response->statusCode() . "\n";
-//                    print_r($response->headers());
-//                    print $response->body() . "\n";
-                 } catch (Exception $e) {
-                     echo 'Caught exception: ' . $e->getMessage() . "\n";
-                 }
+
+                 $sendgrid->send($email);
+
 
                  // update the donor details in db next_payment_date
                  $donor->period_of_donation == 'monthly' ? $donor->next_payment_date = Carbon::now()->addMonth() : $donor->next_payment_date = Carbon::now()->addYear();

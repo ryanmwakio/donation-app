@@ -50,18 +50,12 @@ class DailyCheckPaymentDates extends Command
                         "text/html", "<h1>Thank you for continuing to donate.</h1><br><style>h1{color:red;}</style><p>Your donation day is today, click to get the payment email <a href=".$initiate_payment_url." style='color: #0072b3'>pesapal payment link</a></p><hr><img src='https://res.cloudinary.com/dwxeqcqt0/image/upload/v1654351754/imageedit_1_2429230768_tg9nee.png' alt=''/>"
                     );
                     $sendgrid = new \SendGrid(env('SENDGRID_API_KEY'));
-                    try {
-                        $response = $sendgrid->send($email);
-                        $email_response_code = $response->statusCode() . "\n";
-//                    print_r($response->headers());
-//                    print $response->body() . "\n";
-                    } catch (Exception $e) {
-                        echo 'Caught exception: ' . $e->getMessage() . "\n";
-                    }
+
+                    $sendgrid->send($email);
+
                 }
 
             }
         }
-        echo "schedulerbot: Checking payment dates...Ran at".\Carbon\Carbon::now()."\n ";
     }
 }

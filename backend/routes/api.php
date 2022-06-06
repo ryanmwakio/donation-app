@@ -20,6 +20,19 @@ use App\Http\Controllers\HomeController;
 
 // Path: routes for api version 1
 Route::prefix('v1')->group(function () {
+    /**
+     * Path: /api/v1/get-csrf-token
+     * Method: GET
+     * Description: Get to the root of the api
+     * Accept : application/json
+     * Content-Type : application/json
+     *
+     */
+    Route::get('/get-csrf-token', function () {
+        $token = csrf_token();
+        return response()->json(['csrf_token' => $token]);
+    });
+
 
     /**
      * Path: /api/v1/

@@ -17,3 +17,8 @@ Route::get('/', function () {
     $app_url = env('APP_URL');
     return view('welcome', compact('app_url'));
 });
+
+Route::get('/get-csrf-token', function () {
+    $token = csrf_token();
+    return response()->json(['csrf_token' => $token]);
+});

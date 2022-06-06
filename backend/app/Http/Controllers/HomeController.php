@@ -13,11 +13,13 @@ class HomeController extends Controller
      */
     public function index(): JsonResponse
     {
+        $csrf_token = csrf_token();
         // response json
         return response()->json([
             'message' => 'Welcome to the Donation API.',
             'code'=> 200,
             'status' => 'success',
+            'csrf_token' => $csrf_token
         ], 200);
     }
 }

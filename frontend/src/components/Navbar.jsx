@@ -3,8 +3,10 @@ import { Link, NavLink } from 'react-router-dom';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { VscChromeClose } from 'react-icons/vsc';
 import Fade from 'react-reveal/Fade';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [mobileMenu, setMobileMenu] = useState(false);
 
   const items = [
@@ -12,6 +14,10 @@ const Navbar = () => {
     { name: 'Register', to: '/register' },
     { name: 'Dashboard', to: '/dashboard' },
   ];
+
+  const redirectToLogin = () => {
+    navigate('/login');
+  };
 
   return (
     <header className='z-50 py-4 bg-blue-500 navbar'>
@@ -27,7 +33,7 @@ const Navbar = () => {
 
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
-            className='lg:hidden p-2 border-2 border-green-500 focus:ring-4 ring-offset-1 ring-green-200 transition duration-500 rounded-lg'
+            className='lg:hidden p-2 border-2  focus:ring-4 ring-offset-1  transition duration-500 rounded-lg'
           >
             {mobileMenu ? (
               <VscChromeClose className='text-xl' />
@@ -42,7 +48,7 @@ const Navbar = () => {
                 <NavLink
                   className={(info) =>
                     info.isActive
-                      ? 'text-green-600 border-b border-white py-1 text-sm'
+                      ? 'text-white border-b border-white py-1 text-sm'
                       : 'text-sm'
                   }
                   key={index}
@@ -55,7 +61,10 @@ const Navbar = () => {
 
             <div>
               <div className='flex gap-x-2'>
-                <button className=' px-5 py-1 rounded-full border border-green-600 hover:bg-green-700 hover:text-green-700 focus:ring-1 text-white ring-white ring-offset-1 transition duration-500 text-sm'>
+                <button
+                  onClick={redirectToLogin}
+                  className=' px-5 py-1 rounded-full border border-white hover:bg-white hover:text-blue-500 focus:ring-1 text-white ring-white ring-offset-1 transition duration-500 text-sm'
+                >
                   Sign In
                 </button>
 

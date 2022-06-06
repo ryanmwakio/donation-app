@@ -13,6 +13,13 @@ module.exports = {
       yellow: colors.yellow,
       red: colors.red,
       blue: colors.blue,
+      orange: colors.orange,
+      pink: colors.pink,
+      purple: colors.purple,
+      green: colors.green,
+      teal: colors.teal,
+      cyan: colors.cyan,
+
       //custom colors start here
       primarygreen: '#20DC49',
       primaryblack: '#090B0F',
