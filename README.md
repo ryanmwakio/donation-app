@@ -27,9 +27,9 @@ Pesapal Donations is a web based interface as well as a restful api where donato
 Donation app is created to easier payments of donations as all payments are tightly integrated to the Pesapal payments platform (the convenient way to make payments) with all the payments channels at the tip of your fingertips.
 Developed by [Ryan Mwakio](https://ryanmwakio.netlify.app) to make the simple simpler.
 
-> The overriding development goal goal for donation
+> The overriding development goal for donation
 > app was to make payments by donors easier through a well designed,
-> modeled and though of process
+> modeled and thought of process
 
 ## Tech
 
